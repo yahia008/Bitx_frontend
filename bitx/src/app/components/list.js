@@ -98,7 +98,7 @@ const List = () => {
       {transactions.length > 0 ? (
         transactions.map((transaction, index) => (
           <Link href={`/dasboard/transaction/${transaction._id}`}>
-          <div key={transaction._id} className='text-white mt-4 flex 
+          <div key={index} className='text-white mt-4 flex 
           justify-between sm:text-xm text-[10px]
           hover:bg-pink-200
           cursor-pointer

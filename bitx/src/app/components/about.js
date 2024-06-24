@@ -22,7 +22,7 @@ const About = () => {
 
         <h2 className='text-sm font-bold mb-2'>How We Do It</h2>
         <p className='mb-2'>
-          Using advanced algorithms and expert analysis, we filter through market noise to identify the most lucrative opportunities, ensuring our users' investments work smarter, not harder.
+          Using advanced algorithms and expert analysis, we filter through market noise to identify the most lucrative opportunities, ensuring our users investments work smarter, not harder.
         </p>
 
         <h2 className='text-sm font-bold mb-2'>Join Us</h2>
