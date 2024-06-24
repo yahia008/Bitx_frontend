@@ -1,5 +1,5 @@
 [build]
-  command = "next build && output export"
+  command = "next build 
   publish = "out"
 
 [[redirects]]
