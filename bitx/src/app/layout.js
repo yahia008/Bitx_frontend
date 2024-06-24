@@ -4,7 +4,7 @@ import "./globals.css";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import RouteChangeSpinner from "./components/routerswitch";
-
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +18,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       
       <body className={inter.className}>{children}
-      <RouteChangeSpinner/>
+      <Suspense fallback={<div>Loading...</div>}>
+          <RouteChangeSpinner />
+        </Suspense>
+
       <ToastContainer
        className="sm:mx-auto sm:w-1/2 lg:w-1/3"
       position="top-center"
