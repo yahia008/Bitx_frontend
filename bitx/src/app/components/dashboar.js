@@ -9,6 +9,7 @@ import { FiLogOut } from 'react-icons/fi';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation'; 
 import Link from 'next/link';
+import Spinner from './spinner';
 
 
 
@@ -67,7 +68,7 @@ const Dashboard = () => {
 
 if (!user) {
   
-  return <p>Loading...</p>;
+  return <Spinner/>;
 }
 
 

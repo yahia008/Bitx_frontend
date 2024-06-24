@@ -39,7 +39,7 @@ const List = () => {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
         const data = await res.json();
-       // console.log('Transactions response:', data.user);
+        console.log('Transactions response:', data.user);
         setTransactions(data.user);
        
       } catch (error) {
@@ -98,7 +98,7 @@ const List = () => {
       {transactions.length > 0 ? (
         transactions.map((transaction, index) => (
           <Link href={`/dasboard/transaction/${transaction._id}`}>
-          <div key={index} className='text-white mt-4 flex 
+          <div key={parseInt(transaction.id)} className='text-white mt-4 flex 
           justify-between sm:text-xm text-[10px]
           hover:bg-pink-200
           cursor-pointer
