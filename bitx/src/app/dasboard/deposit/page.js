@@ -1,5 +1,5 @@
 import Transaction from '@/app/components/transaction'
-import React from 'react'
+
 
 const page = () => {
   return (

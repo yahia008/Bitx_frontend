@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { notFound } from 'next/navigation';
 //import { fetctxid } from '@/app/utils/handlers';
 import Txid from './txid';
