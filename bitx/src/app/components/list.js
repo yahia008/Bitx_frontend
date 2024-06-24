@@ -74,6 +74,16 @@ const List = () => {
      return date.toLocaleDateString('en-US', options) + ' ' + date.toLocaleTimeString('en-US', options);
    };
  
+
+const hashStringToNumber = (str) => {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      const char = str.charCodeAt(i);
+      hash = (hash << 5) - hash + char;
+      hash &= hash; // Convert to 32bit integer
+    }
+    return hash;
+  };
  
    if (!user) {
      return <div >fetching data</div>
@@ -97,8 +107,8 @@ const List = () => {
 
       {transactions.length > 0 ? (
         transactions.map((transaction, index) => (
-          <Link href={`/dasboard/transaction/${transaction._id}`}>
-          <div key={parseInt(transaction.id)} className='text-white mt-4 flex 
+          <Link key={hashStringToNumber(transaction._id)}  href={`/dasboard/transaction/${transaction._id}`}>
+          <div className='text-white mt-4 flex 
           justify-between sm:text-xm text-[10px]
           hover:bg-pink-200
           cursor-pointer
