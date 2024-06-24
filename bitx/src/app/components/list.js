@@ -88,7 +88,8 @@ const hashStringToNumber = (str) => {
    if (!user) {
      return <div >fetching data</div>
    }
- 
+   const sortedTransactions = [...transactions].sort((a, b) => new Date(b.date) - new Date(a.date));
+
 
   return (
     <div className='bg-black h-screen p-3 sm:flex sm:justify-center '>
@@ -105,8 +106,8 @@ const hashStringToNumber = (str) => {
               <p>date</p>
         </div>
 
-      {transactions.length > 0 ? (
-        transactions.map((transaction, index) => (
+      {sortedTransactions.length > 0 ? (
+        sortedTransactions.map((transaction, index) => (
           <Link key={hashStringToNumber(transaction._id)}  href={`/dasboard/transaction/${transaction._id}`}>
           <div className='text-white mt-4 flex 
           justify-between sm:text-xm text-[10px]
