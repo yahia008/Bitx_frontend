@@ -20,7 +20,7 @@ const Dashboard = () => {
     { id: 2, icon: <FaCog />, title: 'Settings', route:'/auth/login', 
       handler:(router)=>{
         localStorage.removeItem('user')
-        router.push('/auth/login')
+        router.push('/auth/forgot-password')
        }  },
     { id: 3, icon: <FaInfoCircle />, title: 'About Us', route:'/dasboard/about' }
   ];
@@ -82,7 +82,7 @@ const formattedBalance = new Intl.NumberFormat('en-NG', {
     <div className='bg-black h-screen p-3 sm:flex sm:justify-center '>
       <div className='sm:bg-gray-900 sm:w-[500px] p-6 sm:rounded'>
             <div className='flex justify-between items-center'>
-                <h2 className='text-yellow-400 font-bold text-2xl'>Bixt</h2>
+                <h2 className='text-yellow-400 font-bold text-2xl'>Bitx</h2>
               <Link href='/auth/login'> <FiLogOut
                onClick={()=>{localStorage.removeItem('user');
                 router.push('/login');}} className='text-yellow-400 
