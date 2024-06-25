@@ -39,7 +39,7 @@ const List = () => {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
         const data = await res.json();
-        console.log('Transactions response:', data.user);
+        //console.log('Transactions response:', data.user);
         setTransactions(data.user);
        
       } catch (error) {

@@ -11,8 +11,31 @@ async function fetctxid(txid) {
     return null;
   }
   const data = await res.json();
+  
   return data;
 }
+
+
+export async function generateStaticParams() {
+  const storeData = localStorage.getItem('user');
+  const parseData = JSON.parse(storeData)
+  const token = parseData.token
+  const res = await fetch('https://bitx.onrender.com/transaction/novex',  {
+    method: 'GET',
+    headers: {
+      'Authorization': `Bearer ${token}`,
+      'Content-Type': 'application/json',
+    }});
+  const data = await res.json();
+  const transactionIds = data.user.map(transaction => transaction._id);
+
+  return transactionIds.map((txid) => ({
+    params: { txid },
+  }));
+}
+
+
+
 const page = async ({params}) => {
   const data = await fetctxid(params.txid);
 
