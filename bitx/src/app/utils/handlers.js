@@ -53,7 +53,7 @@ export const  onsubmit = async(values, {setSubmitting, resetForm}, router, isLog
       email: Yup.string().email('Invalid email address').required('Email is required'),
       password: Yup.string()
         .min(5, 'Password is too short')
-        .matches(passwordRules, { message: "Please create a stronger password" })
+        //.matches(passwordRules, { message: "Please create a stronger password" })
         .required('Password is required'),
       confirm: !isLogin ? Yup.string()
             .oneOf([Yup.ref('password'), null], 'Passwords must match')
