@@ -101,7 +101,7 @@ const formattedBalance = new Intl.NumberFormat('en-NG', {
          <p className='text-white text-xs'>withdraw</p>
          </div>         
          </Link>
-         <Link href='/dasboard/plan'> <div className= 'flex flex-col items-center p-2 hover:bg-fuchsia-800 hover:rounded cursor-pointer'><GiReceiveMoney className="text-yellow-400 text-4xl" />
+         <Link href='/dasboard/deposit'> <div className= 'flex flex-col items-center p-2 hover:bg-fuchsia-800 hover:rounded cursor-pointer'><GiReceiveMoney className="text-yellow-400 text-4xl" />
       <p className='text-white text-xs'>Top up</p>
       </div>
       </Link>
