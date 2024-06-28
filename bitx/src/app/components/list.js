@@ -108,7 +108,7 @@ const hashStringToNumber = (str) => {
 
       {sortedTransactions.length > 0 ? (
         sortedTransactions.map((transaction, index) => (
-          <Link key={hashStringToNumber(transaction._id)}  href={`/dasboard/transaction/${transaction._id}`}>
+          <Link key={hashStringToNumber(transaction._id)}  href={`/dasboard`}>
           <div className='text-white mt-4 flex 
           justify-between sm:text-xm text-[10px]
           hover:bg-pink-200

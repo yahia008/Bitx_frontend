@@ -16,6 +16,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+       <Head>
+          <link rel="preload" href="https://bitxchange.netlify.app/_next/static/media/c9a5bc6a7c948fb0-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+          {/* Other <head> elements */}
+        </Head>
       
       <body className={inter.className}>{children}
       <Suspense fallback={<div>Loading...</div>}>
