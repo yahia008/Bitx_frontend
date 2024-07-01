@@ -12,12 +12,12 @@ const Status = () => {
 
               <h2 className='mb-4 text-white font-bold text-sm sm:text-base'>Complete Your Transaction by Bank Transfer</h2>
               <h2 className='text-white mb-2 font-bold'>Account Number</h2>
-              <p className='mt-2'>6102634625</p>
+              <p className='mt-2'>6669410861</p>
               <h2 className='text-white mt-2 font-bold'>Bank Name</h2>
-              <p className='mt-2'>opay</p>
+              <p className='mt-2'>MONIEPOINT</p>
 
               <h2 className='text-white mt-2 font-bold'>Account Name</h2>
-              <p className='mt-2'>tijjani yahya</p>
+              <p className='mt-2'>HABIBAT ABDULKAREEM</p>
          
 
             <Link href='/dasboard/status'>
@@ -37,3 +37,4 @@ const Status = () => {
 }
 
 export default Status
+ 
