@@ -93,7 +93,7 @@ const formattedBalance = new Intl.NumberFormat('en-NG', {
              rounded h-[150px] mt-4'>
                 <div className='text-white font-bold mb-2 text-2xl'>{user.user.name}</div>
                
-                <h2 className='text-white font-bold text-3xl'>
+                <h2 className='text-white font-bold text-2xl sm:3xl'>
                   <span className=" font-bold text-white"></span>{formattedBalance}</h2>
                 </div>
                 <div className='flex justify-evenly items-center mt-[30px] w-full p-3'>
